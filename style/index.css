@@ -1,13 +1,3 @@
-body, html {
-    background-image: url(../photo/Plano.svg);
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    font-family: 'Inter', sans-serif;
-    background-repeat: no-repeat;
-    background-size: cover; /* Adiciona esta linha */
-}
-
 #box_lado_direito {
     text-align: center;
     height: 100%;
