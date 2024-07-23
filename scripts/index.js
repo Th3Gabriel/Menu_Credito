@@ -5,8 +5,10 @@ var botao = window.document.getElementById('botao_login')
 var esqueceu_Senha = window.document.getElementById('link_EsqueceuSenha')
 var logo = window.document.getElementById('lg_Sicoob')
 
-function entrar() {
-    box.style = 'width:100%; transition-duration: 0.9s;';
+function entrar(event) {
+    event.preventDefault();  // Previne o envio do formulário
+
+    box.style = 'width:100%; transition-duration: 1.5s;';
     InputEmail.style = 'display:none';
     InputSenha.style = 'display:none';
     botao.style = 'display:none';
@@ -14,12 +16,11 @@ function entrar() {
     logo.style = 'display:none';
 
     anima = setTimeout(() => {
-        box.style = 'width:0%; transition-duration: 0.9s;'
+        box.style = 'width:0%; transition-duration: 1.5s;';
     }, 900);
 
     setTimeout(() => {
         window.location.href = 'tela_inicial.html'; // Caminho relativo para a pasta raiz
-    }, anima);
-    
+    }, 1800); // O tempo deve ser o dobro do tempo da animação
 }
 
