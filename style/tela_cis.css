@@ -10,3 +10,16 @@ iframe{
     align-items: center;
     height: 100vh; /* Altura do contêiner pai */
 }
+
+#Voltar{
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+#Voltar:hover{
+    padding: 15px;
+    transform: rotateZ(360);
+    transition-duration: 0.3s
+}
+
