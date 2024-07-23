@@ -4,7 +4,7 @@ var registerForm = window.document.getElementById('register_form');
 let link_EsqueceuSenha = window.document.getElementById('link_EsqueceuSenha');
 
 function entrar(event) {
-    event.preventDefault();  // Previne o envio do formulário
+    event.preventDefault();  
 
     box.style = 'width:100%; transition-duration: 1.5s;';
     loginForm.style = 'display:none';
@@ -15,8 +15,8 @@ function entrar(event) {
     }, 900);
 
     setTimeout(() => {
-        window.location.href = 'tela_inicial.html'; // Caminho relativo para a pasta raiz
-    }, 1800); // O tempo deve ser o dobro do tempo da animação
+        window.location.href = 'tela_inicial.html'; 
+    }, 1800);
 }
 
 function mostrarRegistro() {
@@ -25,7 +25,7 @@ function mostrarRegistro() {
         loginForm.style.display = 'none';
         registerForm.style.display = 'flex';
         registerForm.classList.remove('hidden');
-    }, 500); // Duração da animação (deve ser igual ao tempo de transição no CSS)
+    }, 500); 
 }
 
 function mostrarLogin() {
@@ -34,13 +34,13 @@ function mostrarLogin() {
         registerForm.style.display = 'none';
         loginForm.style.display = 'flex';
         loginForm.classList.remove('hidden');
-    }, 500); // Duração da animação (deve ser igual ao tempo de transição no CSS)
+    }, 500); 
 }
 
 function registrar(event) {
-    event.preventDefault();  // Previne o envio do formulário de registro
+    event.preventDefault();  
 
-    // Aqui você pode adicionar a lógica para registrar o usuário
+    
 
     alert('Usuário registrado com sucesso!');
     mostrarLogin();
