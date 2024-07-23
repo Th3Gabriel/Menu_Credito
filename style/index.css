@@ -13,6 +13,7 @@
     border-bottom-right-radius: 14px;
     background-color: #f0f0f0; /* Cor de fundo opcional */
     box-shadow: -2px 0 5px rgba(0,0,0,0.1); /* Sombra opcional para destacar a box */
+    overflow: hidden; /* Para garantir que o conteúdo não saia da box */
 }
 
 /* Responsividade para telas menores */
@@ -26,24 +27,38 @@
     }
 
     form {
-        margin-top: 50px; /* Ajuste a margem conforme necessário */
+        margin-top: 20px; /* Ajuste a margem conforme necessário */
     }
 
     .input {
         width: 90%; /* Ajusta a largura dos inputs */
+        margin: 0 auto 18px; /* Centraliza e adiciona margem inferior */
     }
 
     button {
         width: 80%; /* Ajusta a largura do botão */
+        margin: 0 auto; /* Centraliza o botão */
     }
 
     #lg_Sicoob {
-        margin-top: 50px; /* Ajuste a margem conforme necessário */
+        margin-top: 20px; /* Ajuste a margem conforme necessário */
     }
 }
 
 form {
-    margin-top: 300px;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.hidden {
+    opacity: 0;
+    transform: translateY(-20px);
+    pointer-events: none;
 }
 
 .input {
@@ -56,8 +71,6 @@ form {
 }
 
 button {
-    font-weight: bold;
-    background-color: #004952;
     color: white;
     width: 200px;
     height: 40px;
@@ -72,12 +85,35 @@ button:hover {
     box-shadow: 0px 15px 20px 0px;
 }
 
+#botao_login {
+    font-weight: bold;
+    background-color: #004952;
+}
+
+#botao_registrar {
+    font-weight: bold;
+    border: 1px solid #004952;
+    color: black !important;
+}
+
 #lg_Sicoob {
-    margin-top: 100px;
+    margin-top: 50px;
     width: 250px;
 }
 
 #link_EsqueceuSenha {
     font-size: 10px;
     text-decoration: none;
+}
+
+#botao_enviar_registro{
+    background-color: #004952;
+    color: white;
+    font-weight: bolder;
+}
+
+#botao_voltar{
+    border: 1px solid #004952;
+    color: black;
+    font-weight: bolder;
 }

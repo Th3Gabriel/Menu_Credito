@@ -29,17 +29,11 @@
     cursor: pointer;
     transition: background-color 0.6s, transform 0.6s, box-shadow 0.6s;
 }
+
 .box:hover {
     transform: translateY(-10px);
     background-color: rgba(2, 30, 33, 0.58);
     box-shadow: 0px 15px 20px 0px;
-}
-
-@media (max-width: 800px) {
-    .box {
-        height: 200px;
-        width: 200px;
-    }
 }
 
 .icon {
@@ -62,6 +56,43 @@ a {
     flex-grow: 1;
     justify-content: space-between;
 }
+
 a:hover {
     color: white;
+}
+
+@media (max-width: 1200px) {
+    #menu_principal {
+        grid-template-columns: repeat(2, 1fr); /* Mantém 2 colunas */
+        gap: 30px; /* Reduz o espaço entre as caixas */
+    }
+
+    .box {
+        height: 250px;
+        width: 250px;
+    }
+}
+
+@media (max-width: 800px) {
+    #menu_principal {
+        grid-template-columns: 1fr; /* Uma coluna */
+        gap: 20px; /* Reduz ainda mais o espaço entre as caixas */
+    }
+
+    .box {
+        height: 200px;
+        width: 200px;
+    }
+}
+
+@media (max-width: 500px) {
+    .box {
+        height: 150px;
+        width: 150px;
+        padding: 15px; /* Reduz o padding */
+    }
+
+    .icon {
+        max-width: 100px;
+    }
 }
